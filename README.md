@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a simple app that calls the public https://restcountries.com/#rest-countries, and displays a list of all the worlds countries with basic statistics. If you click on a certain country, a chart should pop up in a modal and show the population and area in km/sq. Maybe a cool improvement would be to make a call to OpenAI to display some kind of blurb about the country as well.
 
-## Getting Started
+I had some issues with the jest test runner not playing well with either Nextjs or Node, which I was trying to resolve until I ran out of time. There are three tests, two of them were working, now one fails because of this error. I've bypassed the third for now.
 
-First, run the development server:
+Another improvement that could be made is filtering based on continent, min/max population/area, it could be a useful place to implement useMemo.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+For responsive design Tailwind offers this syntax w-96 md:w-1/2 for specificying Country cell width. Another improvement that I would have made would be to disable the Chart Modal in mobile implentation and instead have the chart appear on a side drawer.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Summmary: -I used Next.js because it is easy to bootsrap a simple project. -Tailwind.css was used for styling because it's simple to whip up a quick project using inline tags that compute to css. -I used Chart.js to display
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Getting Started
+First, install dependencies:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+`npm install`
 
-## Learn More
+Second, run the development server:
 
-To learn more about Next.js, take a look at the following resources:
+`npm run dev`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Open http://localhost:3000 with your browser to see the result.
