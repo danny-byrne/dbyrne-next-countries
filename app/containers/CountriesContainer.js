@@ -28,7 +28,14 @@ const CountriesContainer = () => {
     <>
       <div className={`h-full w-screen ${backGroundColor} text-gray-800 `}>
         <div className="flex flex-col gap-4 place-items-center ">
-          <div className="text-3xl mt-6">Countries of the World</div>
+          <div
+            className="text-3xl mt-6"
+            aria-label="List of Countries of the World"
+            role="heading"
+            aria-level="1"
+          >
+            Countries of the World
+          </div>
           {countries.map((country, index) => (
             <CountryCard
               key={country.name}

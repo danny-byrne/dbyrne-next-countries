@@ -23,6 +23,7 @@ const Modal = ({ hideModal, selectedCountry }) => {
               <button
                 className="bg-transparent border-0 text-black float-right"
                 onClick={hideModal}
+                aria-label="Close Modal"
               >
                 <span className="text-black opacity-7 h-6 w-6 text-xl block bg-gray-400 py-0 rounded-full">
                   x
