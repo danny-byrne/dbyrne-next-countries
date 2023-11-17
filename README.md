@@ -1,8 +1,6 @@
-This is a simple app that calls the public https://restcountries.com/#rest-countries, and displays a list of all the worlds countries with basic statistics. If you click on a certain country, a modal should pop up with a chart showing the population and area in km/sq. Maybe a cool improvement would be to make a call to OpenAI to display some kind of blurb about the country as well.
+This is a simple app that calls the public api https://restcountries.com/, and displays a list of all the worlds countries with basic statistics. If you click on a certain country, a modal should pop up with a chart showing the population and area in km/sq.
 
-Another enhancement that I would make is filtering based on continent, min/max population/area, it could be a useful place to implement useMemo.
-
-For responsive design Tailwind offers this syntax w-96 md:w-1/2 for specificying Country cell width (see CountryCell component).
+For responsive design Tailwind offers this syntax `w-96 md:w-1/2` for specificying Country cell width (see CountryCell component).
 
 I have also added a `useMobileView` hook in CountriesContainer, which basically allows me to run a media query in React hook. A simple use case I have is changing the background color for the page once the page width decreases below 767 pixels.
 This npm package `react-responsive` was necessary because on a Next.js app, the window object is not available to qeury values from since it is server side rendered.
@@ -10,8 +8,11 @@ This npm package `react-responsive` was necessary because on a Next.js app, the 
 A more substantial implementation for this would be to instead have the chart appear in a side drawer on mobile.
 
 Summmary:
+
 -I used Next.js because it is easy to bootsrap a simple project.
--Tailwind.css was used for styling because it's simple to whip up a quick project using inline tags that compute to css.
+
+-Tailwind.css was used for styling because it's simple to whip up a quick project using inline strings that compute to css.
+
 -I used Chart.js to display area and population. Given more time I would have implemented a call to OpenAI to return structured data with certain analytics and display them in D3.
 
 Getting Started
