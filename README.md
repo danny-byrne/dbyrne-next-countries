@@ -2,7 +2,12 @@ This is a simple app that calls the public https://restcountries.com/#rest-count
 
 Another enhancement that I would make is filtering based on continent, min/max population/area, it could be a useful place to implement useMemo.
 
-For responsive design Tailwind offers this syntax w-96 md:w-1/2 for specificying Country cell width (see CountryCell component). Another improvement that I would have made would be to disable the Chart Modal in mobile implentation and instead have the chart appear on a side drawer.
+For responsive design Tailwind offers this syntax w-96 md:w-1/2 for specificying Country cell width (see CountryCell component).
+
+I have also added a `useMobileView` hook in CountriesContainer, which basically allows me to run a media query in React hook. A simple use case I have is changing the background color for the page once the page width decreases below 767 pixels.
+This npm package `react-responsive` was necessary because on a Next.js app, the window object is not available to qeury values from since it is server side rendered.
+
+A more substantial implementation for this would be to instead have the chart appear in a side drawer on mobile.
 
 Summmary:
 -I used Next.js because it is easy to bootsrap a simple project.
