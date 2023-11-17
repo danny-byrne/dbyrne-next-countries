@@ -9,7 +9,7 @@ A more substantial implementation for this would be to instead have the chart ap
 
 Summmary:
 
--I used Next.js because it is easy to bootsrap a simple project.
+-I used Next.js because it is easy to bootstrap a simple project.
 
 -Tailwind.css was used for styling because it's simple to whip up a quick project using inline strings that compute to css.
 
